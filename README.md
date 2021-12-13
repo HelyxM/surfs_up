@@ -12,7 +12,7 @@ The results of this analysis were very useful for achieving the goal of this pro
 1. Oahu, Hawaii has a comfortable average temperature and a moderately higher maximum temperature - with neither values giving the impression that people would avoid the area at either point in the year for being too hot or too cold. As shown in the image below, the max temperature values are very close to each other, with neither breaking into the 90 degrees Fahrenheit level. In addition to this, the minimum temperatures vary slightly more, but never get below 55 degrees Fahrenheit. Although the minimum temperatures would likely be too cold for most people to surf in both cases, the fact that the temperatures never get near freezing temperatures means people are not that likely to avoid ice cream as much due to cold weather.
 
 ### *Statistical Summaries Comparison*
-- ![December vs. June Temps](December vs. June Temps.png)
+- ![December_june_temps](December_june_temps.png)
 
 2. The statistical summaries of the dataframes created for weather observations in June and December had very little variation, showing the location provides a comfortable level of certainty that the previous conclusion will hold true. This means a business will not have to worry too much about fluctuation in sales due to the weather throughout the year.
 
@@ -31,7 +31,9 @@ To gather a larger amount of weather data for both June and December, a new quer
 - december_results = session.query(Measurement.date, Measurement.prcp, Measurement.tobs).filter(extract('month', Measurement.date) == 12).all()
 ```
 These two queries will return values that can be converted into a Pandas dataframe with the same code line as for the temperature, but adding another column label for the relevant data column that is filled by the precipitation records. By using these values for both months a summary can be created that gives greater insight into the weather trends in Oahu during those months. A comparison of the two summary tables is included in the screenshot below, with the variation between minimum and maximum recorded precipitation levels being quite high, but the overall average amount being very low for both months considered.
-![December vs. June Precip and Temps](December vs. June Precip and Temps.png)
+
+![December_june_precip_temps](December_june_precip_temps.png)
+
 In addition to the data that the new queries can provide, a different analysis to add greater perspective on the location's weather can be run when considering these values across the different years' records available in the SQLite database. By grouping the values by year a comparison for each month's average temperature and precipitation records can be shown by year and provide some perspective in how confidently the results above can be used for deciding on establishing this business. Based on the handful of years available, the average temperatures seem to fluctuate but the only clear trend is in the more recent years for June going up slightly. In addition to that, the precipitation values show some clear cases of outliers among the averages available, which gives a clearer idea of how unpredictable the weather can be in the area. The two tables with these averages are included below.
-![December Averages vs June Averages](December Averages vs June Averages.png)
+![December_june_averages](December_june_averages.png)
 
