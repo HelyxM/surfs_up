@@ -35,5 +35,6 @@ These two queries will return values that can be converted into a Pandas datafra
 ![December_june_precip_temps](December_june_precip_temps.png)
 
 In addition to the data that the new queries can provide, a different analysis to add greater perspective on the location's weather can be run when considering these values across the different years' records available in the SQLite database. By grouping the values by year a comparison for each month's average temperature and precipitation records can be shown by year and provide some perspective in how confidently the results above can be used for deciding on establishing this business. Based on the handful of years available, the average temperatures seem to fluctuate but the only clear trend is in the more recent years for June going up slightly. In addition to that, the precipitation values show some clear cases of outliers among the averages available, which gives a clearer idea of how unpredictable the weather can be in the area. The two tables with these averages are included below.
+
 ![December_june_averages](December_june_averages.png)
 
